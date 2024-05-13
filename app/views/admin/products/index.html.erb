@@ -1,0 +1,58 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <% content_for :title, "Products" %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Products</h1>
+    <%= link_to "New product", new_admin_product_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+ <div style="display: flex; flex-direction: column; width: 100%;">
+    <div style="overflow-x: auto; margin-right: 0.125rem; margin-left: 0.125rem;">
+        <div style="padding-top: 0.5rem; display: inline-block; min-width: 100%;">
+            <div style="overflow-x: auto;">
+                <table style="min-width: 100%; overflow-x: scroll;">
+                    <thead style="background-color: #fff; border-bottom: 1px solid;">
+                        <tr>
+                            <th scope="col" style="font-size: 0.875rem; font-weight: 500; color: #4b5563; padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; text-align: left;">
+                            </th>
+                            <th scope="col" style="font-size: 0.875rem; font-weight: 500; color: #4b5563; padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; text-align: left;">
+                                Name
+                            </th>
+                            <th scope="col" style="font-size: 0.875rem; font-weight: 500; color: #4b5563; padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; text-align: left;">
+                                Description
+                            </th>
+                            <th scope="col" style="font-size: 0.875rem; font-weight: 500; color: #4b5563; padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; text-align: left;">
+                                Price
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @admin_products.each do |p| %>
+                        <tr style="background-color: #f9fafb; border-bottom: 1px solid;">
+                            <td style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; white-space: nowrap; font-size: 0.875rem; font-weight: 500; color: #4b5563; text-decoration: underline;">
+                                <%= p.images.any? ? image_tag(p.images.first.variant(:thumb)) : image_tag("https://via.placeholder.com/50") %>
+                            </td>
+                            <td style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; white-space: nowrap; font-size: 0.875rem; font-weight: 500; color: #4b5563; text-decoration: underline;">
+                                <%= link_to p.name, edit_admin_product_path(p) %>
+                            </td>
+                            <td style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; white-space: nowrap; font-size: 0.875rem; font-weight: 500; color: #4b5563;">
+                                <%= p.description %>
+                            </td>
+                            <td style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; white-space: nowrap; font-size: 0.875rem; font-weight: 500; color: #4b5563;">
+                                $<%= (p.price/100.0).to_s %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

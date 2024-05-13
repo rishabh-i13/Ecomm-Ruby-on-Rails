@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecommerce</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+
+    <%= stylesheet_link_tag "admin" %>
+
+  </head>
+
+  <body>
+    <main class="main">
+      <nav class="navbar">
+        <div class="div1">
+          <div class=flex>
+          <div style="width:4rem"><%= image_tag 'admin_logo.jpeg', class: 'w-16' %></div>
+            <h1 class="ecom" >Ecom Admin</h1>
+          </div>
+          <ul class="contents">
+            <li>
+            <%= link_to admin_path, class:"list-items" do %>
+            <span class="list-item">Dashboard</span>
+
+            <% end %>
+            <li>
+            <%= link_to admin_products_path, class:"list-items" do %>
+            <span class="list-item">Products</span>
+
+            <% end %>
+            <li>
+            <%= link_to admin_categories_path, class:"list-items" do %>
+            <span class="list-item">Categories</span>
+
+            <% end %>
+            <li>
+            <%= link_to admin_path, class:"list-items" do %>
+            <span class="list-item">Orders</span>
+
+            <% end %>
+            
+          </ul>
+        </div>
+      </nav>
+      <%= yield %>
+    </main>
+  </body>
+</html>

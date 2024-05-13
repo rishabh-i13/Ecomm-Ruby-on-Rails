@@ -1,0 +1,60 @@
+.main{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+}
+
+.div1{
+    width: 16rem; /* w-64 translates to width: 16rem; */
+    padding: 1rem; /* p-4 translates to padding: 1rem; */
+    height: 100vh; /* h-screen translates to height: 100vh; */
+    background-color: #6580af; /* bg-gray-600 translates to background-color: #4a5568; */
+    position: -webkit-sticky; /* sticky translates to position: -webkit-sticky; */
+    position: sticky; /* For broader browser support */
+    top: 0; /* top-0 translates to top: 0; */
+}
+
+.ecom{
+  font-size: 1.5rem; /* Equivalent to text-md in Tailwind */
+  padding-top: 0.5rem; /* Equivalent to py-2 in Tailwind */
+  padding-bottom: 0.5rem; /* Equivalent to py-2 in Tailwind */
+  color: #291f97; /* Equivalent to text-gray-50 in Tailwind */
+  font-weight: 700; /* Equivalent to font-bold in Tailwind */
+  display: none; /* Equivalent to hidden in Tailwind */
+}
+
+.list-item{
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.list-items:hover{
+    background-color: #8aafe1;
+}
+
+.list-item {
+    display: none; /* hidden class */
+}
+
+.contents{
+    display: flex;
+  flex-direction: column;
+  color: #f9fafb; /* Or any other shade of gray you prefer */
+}
+
+@media (min-width: 768px) {
+    .ecom {
+      display: block; /* Equivalent to md:block in Tailwind */
+    }
+    .list-item {
+        display: inline-block; /* md:inline-block class */
+    }
+  }

@@ -1,0 +1,221 @@
+find_header: checking for yaml.h... -------------------- no
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -o conftest.exe -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -Lc:/Ruby32-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed  -m64   -lx64-ucrt-ruby320  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+conftest.c:5:10: fatal error: yaml.h: No such file or directory
+    5 | #include <yaml.h>
+      |          ^~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <yaml.h>
+/* end */
+
+--------------------
+
+have_macro: checking for _WIN32... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: /*top*/
+6: #ifndef _WIN32
+7: # error
+8: |:/ === _WIN32 undefined === /:|
+9: #endif
+/* end */
+
+--------------------
+
+have_header: checking for dlfcn.h... -------------------- no
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+conftest.c:5:10: fatal error: dlfcn.h: No such file or directory
+    5 | #include <dlfcn.h>
+      |          ^~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <dlfcn.h>
+/* end */
+
+--------------------
+
+have_header: checking for inttypes.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <inttypes.h>
+/* end */
+
+--------------------
+
+have_header: checking for memory.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <memory.h>
+/* end */
+
+--------------------
+
+have_header: checking for stdint.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <stdint.h>
+/* end */
+
+--------------------
+
+have_header: checking for stdlib.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <stdlib.h>
+/* end */
+
+--------------------
+
+have_header: checking for strings.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <strings.h>
+/* end */
+
+--------------------
+
+have_header: checking for string.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <string.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/stat.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <sys/stat.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/types.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <sys/types.h>
+/* end */
+
+--------------------
+
+have_header: checking for unistd.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <unistd.h>
+/* end */
+
+--------------------
+
+find_header: checking for yaml.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <yaml.h>
+/* end */
+
+--------------------
+
+have_header: checking for config.h... -------------------- yes
+
+PATH=".;c:/Ruby32-x64/lib;c:\Ruby32-x64\bin;c:\Ruby32-x64\msys64\ucrt64\bin;c:\Ruby32-x64\msys64\usr\bin;C:\Ruby32-x64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\7.0\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python311\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\risha\AppData\Roaming\npm;C:\Program Files\mongosh\" "gcc -Ic:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -Ic:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -Ic:/Ruby32-x64/include/ruby-3.2.0 -I. -I./yaml -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -DHAVE_CONFIG_H -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <config.h>
+/* end */
+
+--------------------
+
